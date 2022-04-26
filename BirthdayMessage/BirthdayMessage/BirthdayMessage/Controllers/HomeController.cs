@@ -28,5 +28,28 @@ namespace BirthdayMessage.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [HttpGet]
+        public IActionResult MessageForm()
+        {
+            return View();
+
+
+        }
+
+        [HttpPost]
+        public IActionResult MessageForm(Message message)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("Thanks", message);
+            }
+            else
+            {
+                return View();
+            }
+
+
+        }
     }
 }
