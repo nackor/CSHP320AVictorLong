@@ -15,8 +15,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\BirthdayMessage\BirthdayMessage\BirthdayMessage
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/nacko/UWClasses/CSharpCert/ASPCoreClass/HomeworkRepo/BirthdayMessage/BirthdayMessage/BirthdayMessage/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/nacko/UWClasses/CSharpCert/ASPCoreClass/HomeworkRepo/BirthdayMessage/BirthdayMessage/BirthdayMessage/Views/Home/FinishedMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaW5pc2hlZE1lc3NhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nacko/UWClasses/CSharpCert/ASPCoreClass/HomeworkRepo/BirthdayMessage/BirthdayMessage/BirthdayMessage/Views/Home/MessageForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZXNzYWdlRm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nacko/UWClasses/CSharpCert/ASPCoreClass/HomeworkRepo/BirthdayMessage/BirthdayMessage/BirthdayMessage/Views/Home/Privacy.cshtml]

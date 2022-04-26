@@ -12,12 +12,6 @@ namespace BirthdayMessage.Controllers
         {
             _logger = logger;
         }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         public IActionResult Privacy()
         {
             return View();
@@ -27,6 +21,29 @@ namespace BirthdayMessage.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpGet]
+        public IActionResult MessageForm()
+        {
+            return View();
+
+
+        }
+
+        [HttpPost]
+        public IActionResult MessageForm(Message message)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("FinishedMessage", message);
+            }
+            else
+            {
+                return View();
+            }
+
+
         }
     }
 }

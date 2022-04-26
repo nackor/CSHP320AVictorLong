@@ -1,0 +1,52 @@
+﻿@model BirthdayMessage.Models.Message
+
+@{
+    ViewData["Title"] = "MessageForm";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <title>Happy Birthday!</title>
+</head>
+<body>
+
+    <div class=text-center><h4>BirthdayMessage</h4></div>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="MessageForm">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FromPerson" class="control-label" >From:</label>
+                    <input asp-for="FromPerson" class="form-control" />
+                    <span asp-validation-for="FromPerson" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ToPerson" class="control-label">To:</label>
+                    <input asp-for="ToPerson" class="form-control" />
+                    <span asp-validation-for="ToPerson" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="BdayMessage" class="control-label">Message:</label>
+                    <input asp-for="BdayMessage" class="form-control" />
+                    <span asp-validation-for="BdayMessage" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Send Message" class="btn btn-primary btn-success" />
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

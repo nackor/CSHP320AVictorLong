@@ -1,0 +1,19 @@
+﻿@model BirthdayMessage.Models.Message
+
+@{
+   
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h4>Birthday Card Sent!</h4>
+    
+    <p class="text-primary">From: @Model.FromPerson</p>
+    <p class="text-primary">To: @Model.ToPerson</p>
+    <p class="text-primary"> Message: @Model.BdayMessage</p>
+</body>
+</html>

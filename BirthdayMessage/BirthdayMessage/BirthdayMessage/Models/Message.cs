@@ -4,17 +4,15 @@ namespace BirthdayMessage.Models
 {
     public class Message
     {
-        [Required(ErrorMessage = "Please enter who the message is from")]
-        public string From { get; set; }
-        [Phone]
-        [Required(ErrorMessage = "Please enter your phone")]
-        public string? Phone { get; set; }
+        [Required(ErrorMessage = "Please enter who the message is From")]
+        public string FromPerson { get; set; }
+       
+        [Required(ErrorMessage = "Please enter who the message is To")]
+        public string ToPerson { get; set; }
 
-        [EmailAddress]
-        [Required(ErrorMessage = "Please enter your email")]
-        public string? Email { get; set; }
+       
+        [Required(ErrorMessage = "Please enter a message")]
+        public string BdayMessage { get; set; }
 
-        [Required(ErrorMessage = "Please enter your willattend")]
-        public bool? WillAttend { get; set; }
     }
 }
