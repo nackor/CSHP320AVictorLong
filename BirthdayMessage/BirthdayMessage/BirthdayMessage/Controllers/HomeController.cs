@@ -36,7 +36,7 @@ namespace BirthdayMessage.Controllers
         {
             if (ModelState.IsValid)
             {
-                return View("Thanks", message);
+                return View("FinishedMessage", message);
             }
             else
             {
