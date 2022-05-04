@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SortableCollection.Models;
 using System.Diagnostics;
-using System.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace SortableCollection.Controllers
 {
@@ -57,7 +57,7 @@ namespace SortableCollection.Controllers
                 }
             }
 
-            return View(await queryContact.);
+            return View(await queryContact.AsNoTracking().ToListAsync());
             //return View(contacts);
         }
 
