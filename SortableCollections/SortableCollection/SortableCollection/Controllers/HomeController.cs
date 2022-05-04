@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SortableCollection.Models;
 using System.Diagnostics;
+using System.Data;
 
 namespace SortableCollection.Controllers
 {
@@ -23,9 +24,7 @@ namespace SortableCollection.Controllers
                 new Contact{Id = 3, Name="lisa", City="San Jose", State="CA", Phone="345"},
                 new Contact{Id = 4, Name="cathy", City="Dallas", State="TX", Phone="456"},
             };
-
-            var contacts1  = from contact in contacts
-                        select contact;
+            var queryContact = contacts.AsQueryable();
 
             if (sortOrder != null)
             {
@@ -33,7 +32,7 @@ namespace SortableCollection.Controllers
                 {
                     case "id":
                         {
-                            contacts1 = contacts1.OrderBy(contact => contact.Id);
+                            queryContact = queryContact.OrderBy(x => x.Id); 
                             break;
                         }
                     case "name":
@@ -53,12 +52,12 @@ namespace SortableCollection.Controllers
                             break;
                         }
                     default:
-                        contacts1 = contacts1.OrderBy(contact => contact.Id);
+                        queryContact = queryContact.OrderBy(x => x.Id);
                         break;
                 }
             }
 
-            return View(await contacts1.Asno);
+            return View(await queryContact.);
             //return View(contacts);
         }
 
