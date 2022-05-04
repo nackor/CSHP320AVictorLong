@@ -13,15 +13,19 @@ namespace SortableCollection.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(string sortOrder)
+        public async Task<IActionResult> Index(string sortOrder)
         {
+
             var contacts = new[]
             {
-        new Contact{Id = 1, Name="dave", City="Seattle", State="WA", Phone="123"},
-        new Contact{Id = 2, Name="mike", City="Spokane", State="WA", Phone="234"},
-        new Contact{Id = 3, Name="lisa", City="San Jose", State="CA", Phone="345"},
-        new Contact{Id = 4, Name="cathy", City="Dallas", State="TX", Phone="456"},
-    };
+                new Contact{Id = 1, Name="dave", City="Seattle", State="WA", Phone="123"},
+                new Contact{Id = 2, Name="mike", City="Spokane", State="WA", Phone="234"},
+                new Contact{Id = 3, Name="lisa", City="San Jose", State="CA", Phone="345"},
+                new Contact{Id = 4, Name="cathy", City="Dallas", State="TX", Phone="456"},
+            };
+
+            var contacts1  = from contact in contacts
+                        select contact;
 
             if (sortOrder != null)
             {
@@ -29,7 +33,7 @@ namespace SortableCollection.Controllers
                 {
                     case "id":
                         {
-                            // modify contacts to be ordered by Id
+                            contacts1 = contacts1.OrderBy(contact => contact.Id);
                             break;
                         }
                     case "name":
@@ -48,10 +52,14 @@ namespace SortableCollection.Controllers
                         {
                             break;
                         }
+                    default:
+                        contacts1 = contacts1.OrderBy(contact => contact.Id);
+                        break;
                 }
             }
 
-            return View(contacts);
+            return View(await contacts1.Asno);
+            //return View(contacts);
         }
 
         public IActionResult Privacy()
