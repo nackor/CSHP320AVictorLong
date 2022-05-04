@@ -6,29 +6,34 @@
 <h2>Contacts</h2>
 
 <table class="table">
-            <tr>
-            <th>Name</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Phone</th>
-        </tr>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Phone</th>
+    </tr>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-                        <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.State)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
 
-        </tr>
-}
+            </tr>
+        }
     </tbody>
 </table>
