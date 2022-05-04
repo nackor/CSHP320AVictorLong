@@ -57,7 +57,7 @@ namespace SortableCollection.Controllers
                 }
             }
 
-            return View(await queryContact.AsNoTracking().ToListAsync());
+            return View(await queryContact);
             //return View(contacts);
         }
 

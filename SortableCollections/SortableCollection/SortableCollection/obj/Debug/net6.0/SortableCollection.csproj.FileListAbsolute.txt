@@ -24,3 +24,8 @@ C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\SortableCollection
 C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\SortableCollections\SortableCollection\SortableCollection\obj\Debug\net6.0\SortableCollection.pdb
 C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\SortableCollections\SortableCollection\SortableCollection\obj\Debug\net6.0\SortableCollection.genruntimeconfig.cache
 C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\SortableCollections\SortableCollection\SortableCollection\obj\Debug\net6.0\ref\SortableCollection.dll
+C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\SortableCollections\SortableCollection\SortableCollection\bin\Debug\net6.0\libman.json
+C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\SortableCollections\SortableCollection\SortableCollection\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\SortableCollections\SortableCollection\SortableCollection\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\SortableCollections\SortableCollection\SortableCollection\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\nacko\UWClasses\CSharpCert\ASPCoreClass\HomeworkRepo\SortableCollections\SortableCollection\SortableCollection\obj\Debug\net6.0\SortableCollection.csproj.CopyComplete
