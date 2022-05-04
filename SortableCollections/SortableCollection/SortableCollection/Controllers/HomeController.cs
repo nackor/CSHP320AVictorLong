@@ -13,9 +13,45 @@ namespace SortableCollection.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string sortOrder)
         {
-            return View();
+            var contacts = new[]
+            {
+        new Contact{Id = 1, Name="dave", City="Seattle", State="WA", Phone="123"},
+        new Contact{Id = 2, Name="mike", City="Spokane", State="WA", Phone="234"},
+        new Contact{Id = 3, Name="lisa", City="San Jose", State="CA", Phone="345"},
+        new Contact{Id = 4, Name="cathy", City="Dallas", State="TX", Phone="456"},
+    };
+
+            if (sortOrder != null)
+            {
+                switch (sortOrder.ToLower())
+                {
+                    case "id":
+                        {
+                            // modify contacts to be ordered by Id
+                            break;
+                        }
+                    case "name":
+                        {
+                            break;
+                        }
+                    case "city":
+                        {
+                            break;
+                        }
+                    case "state":
+                        {
+                            break;
+                        }
+                    case "phone":
+                        {
+                            break;
+                        }
+                }
+            }
+
+            return View(contacts);
         }
 
         public IActionResult Privacy()
