@@ -16,6 +16,11 @@ namespace SortableCollection.Controllers
 
         public async Task<IActionResult> Index(string sortOrder)
         {
+            ViewData["IdSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["NameSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["CitySortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["StateSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["PhoneSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
 
             var contacts = new[]
             {
@@ -65,7 +70,7 @@ namespace SortableCollection.Controllers
             
 
             return View(queryContacts);
-            //return View(contacts);
+         
         }
 
         public IActionResult Privacy()

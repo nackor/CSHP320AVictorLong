@@ -22,7 +22,8 @@
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @*@Html.DisplayFor(modelItem => item.Name)*@
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]">@Html.DisplayNameFor(model => model.Name)</a>
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.City)
