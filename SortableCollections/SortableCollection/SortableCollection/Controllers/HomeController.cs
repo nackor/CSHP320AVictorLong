@@ -24,7 +24,8 @@ namespace SortableCollection.Controllers
                 new Contact{Id = 3, Name="lisa", City="San Jose", State="CA", Phone="345"},
                 new Contact{Id = 4, Name="cathy", City="Dallas", State="TX", Phone="456"},
             };
-            var queryContact = contacts.AsQueryable();
+            var queryContacts = from s in contacts
+                           select s;
 
             if (sortOrder != null)
             {
@@ -32,32 +33,38 @@ namespace SortableCollection.Controllers
                 {
                     case "id":
                         {
-                            queryContact = queryContact.OrderBy(x => x.Id); 
+                            //donors.Sort((a, b) => a.amount.CompareTo(b.amount));
+                            queryContacts = queryContacts.OrderByDescending(s => s.Id);
                             break;
                         }
                     case "name":
                         {
+                            queryContacts = queryContacts.OrderByDescending(s => s.Name);
                             break;
                         }
                     case "city":
                         {
+                            queryContacts = queryContacts.OrderByDescending(s => s.City);
                             break;
                         }
                     case "state":
                         {
+                            queryContacts = queryContacts.OrderByDescending(s => s.State);
                             break;
                         }
                     case "phone":
                         {
+                            queryContacts = queryContacts.OrderByDescending(s => s.Phone);
                             break;
                         }
                     default:
-                        queryContact = queryContact.OrderBy(x => x.Id);
+                        queryContacts = queryContacts.OrderByDescending(s => s.Name);
                         break;
                 }
             }
+            
 
-            return View(await queryContact);
+            return View(queryContacts);
             //return View(contacts);
         }
 

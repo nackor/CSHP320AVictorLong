@@ -7,5 +7,7 @@
         public string City { get; internal set; }
         public string State { get; internal set; }
         public string Phone { get; internal set; }
+
+   
     }
 }
