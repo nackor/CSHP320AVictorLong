@@ -8,11 +8,11 @@
 
 <table class="table">
     <tr>
-        <th>ID</th>
+        <th><a asp-action="Index" asp-route-sortOrder="@ViewData["IdSortParam"]">@Html.DisplayNameFor(model => model.Id)</a></th>
         <th><a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]">@Html.DisplayNameFor(model => model.Name)</a></th>
-        <th>City</th>
-        <th>State</th>
-        <th>Phone</th>
+        <th><a asp-action="Index" asp-route-sortOrder="@ViewData["CitySortParam"]">@Html.DisplayNameFor(model => model.City)</a></th>
+        <th><a asp-action="Index" asp-route-sortOrder="@ViewData["StateSortParam"]">@Html.DisplayNameFor(model => model.State)</a></th>
+        <th><a asp-action="Index" asp-route-sortOrder="@ViewData["PhoneSortParam"]">@Html.DisplayNameFor(model => model.City)</a></th>
     </tr>
     <tbody>
         @foreach (var item in Model)

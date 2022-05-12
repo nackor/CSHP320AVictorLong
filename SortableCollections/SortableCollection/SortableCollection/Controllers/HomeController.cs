@@ -16,11 +16,11 @@ namespace SortableCollection.Controllers
 
         public async Task<IActionResult> Index(string sortOrder)
         {
-            ViewData["IdSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewData["NameSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewData["CitySortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewData["StateSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewData["PhoneSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["IdSortParam"] = String.IsNullOrEmpty(sortOrder) ? "id" : "";
+            ViewData["NameSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name" : "";
+            ViewData["CitySortParam"] = String.IsNullOrEmpty(sortOrder) ? "city" : "";
+            ViewData["StateSortParam"] = String.IsNullOrEmpty(sortOrder) ? "state" : "";
+            ViewData["PhoneSortParam"] = String.IsNullOrEmpty(sortOrder) ? "phone" : "";
 
             var contacts = new[]
             {
@@ -44,7 +44,7 @@ namespace SortableCollection.Controllers
                         }
                     case "name":
                         {
-                            queryContacts = queryContacts.OrderByDescending(s => s.Name);
+                            queryContacts = queryContacts.OrderBy(s => s.Name);
                             break;
                         }
                     case "city":
@@ -63,7 +63,7 @@ namespace SortableCollection.Controllers
                             break;
                         }
                     default:
-                        queryContacts = queryContacts.OrderByDescending(s => s.Name);
+                        queryContacts = queryContacts.OrderBy(s => s.Id);
                         break;
                 }
             }
