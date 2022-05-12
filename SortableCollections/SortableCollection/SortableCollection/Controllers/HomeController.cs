@@ -39,7 +39,7 @@ namespace SortableCollection.Controllers
                     case "id":
                         {
                             //donors.Sort((a, b) => a.amount.CompareTo(b.amount));
-                            queryContacts = queryContacts.OrderByDescending(s => s.Id);
+                            queryContacts = queryContacts.OrderBy(s => s.Id);
                             break;
                         }
                     case "name":
@@ -49,17 +49,17 @@ namespace SortableCollection.Controllers
                         }
                     case "city":
                         {
-                            queryContacts = queryContacts.OrderByDescending(s => s.City);
+                            queryContacts = queryContacts.OrderBy(s => s.City);
                             break;
                         }
                     case "state":
                         {
-                            queryContacts = queryContacts.OrderByDescending(s => s.State);
+                            queryContacts = queryContacts.OrderBy(s => s.State);
                             break;
                         }
                     case "phone":
                         {
-                            queryContacts = queryContacts.OrderByDescending(s => s.Phone);
+                            queryContacts = queryContacts.OrderBy(s => s.Phone);
                             break;
                         }
                     default:
