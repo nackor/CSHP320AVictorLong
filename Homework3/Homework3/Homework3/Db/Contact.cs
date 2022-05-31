@@ -5,9 +5,10 @@ namespace Homework3.Db
 {
     public partial class Contact
     {
-        public Contact(int ID, string Name, string Email, string PhoneType, string Number, int Age, string Note, DateTime Date)
+        public Contact() { }
+        public Contact(string Name, string Email, string PhoneType, string Number, int Age, string Note, DateTime Date)
         {
-            ContactId = ID;
+         
             ContactName = Name;
             ContactEmail = Email;
             ContactPhoneType = PhoneType;
